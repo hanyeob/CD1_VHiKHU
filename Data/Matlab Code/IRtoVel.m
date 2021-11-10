@@ -32,12 +32,12 @@ function new_DATA = IRtoVel(DATA)
     new_DATA = addvars(DATA,Velocity);
     new_DATA = renamevars(new_DATA,["Dev1_ai0","Dev1_ai1","Dev1_ai2","Dev1_ai3"], ...
                  ["IR Sensor","X_axis","Y_axis","Z_axis"]);
-
+    figure();
     plot(new_DATA.Time,new_DATA.X_axis,'DisplayName','X axis');hold on;
     plot(new_DATA.Time,new_DATA.Y_axis,'DisplayName','Y axis');
     plot(new_DATA.Time,new_DATA.Z_axis,'DisplayName','Z axis');
     title(tablename); ylabel('Acceleration');
-    yyaxis right; plot(new_DATA.Time,new_DATA.Velocity,'DisplayName','Velocity');ylabel('Velocity');hold off;
+    yyaxis right; plot(new_DATA.Time,new_DATA.Velocity,'DisplayName','Velocity');ylabel('Velocity');ylim([0 30]);hold off;
     
 
     writetimetable(new_DATA,filename);
