@@ -2,7 +2,7 @@
 
 function segment5(INPUT)
     NEW_DATA = INPUT;
-    threshold = 0.1;
+    threshold = 0.2;
     maxvel = 25;
     filecheck = zeros(1, fix(maxvel/(threshold*2))+1);
     tablename = inputname(1);
@@ -25,7 +25,7 @@ function segment5(INPUT)
 
         constvel = fix(NEW_DATA.Velocity(j)/(threshold*2))*(threshold*2)+threshold; % 대표 속도
         index = fix(NEW_DATA.Velocity(j)/(threshold*2))+1;
-        filename = sprintf('F1_01\\%sseg_%.1fkmh.csv',tablename, constvel);
+        filename = sprintf('F4_02\\%sseg_%.1fkmh.csv',tablename, constvel);
 
         if filecheck(index) == 0
             writetable(NEW_DATA(j:j+next-1,:),filename);
