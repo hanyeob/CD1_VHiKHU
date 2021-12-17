@@ -1,0 +1,7 @@
+1. First apply the high pass filter on the 3-axis acceleration signal.
+2. Then convert the data into 1D acceleration signal.
+3. Then apply segmentation using threshold value. 
+            [Currently, you are segmenting using the exactly velocity match. Try to segment using some threshold value.]
+            [Define a threshold value, and do segmentation based on this thrshold rather than doing segmentation with exact match].
+4. Then do rendering using inverse weighted interpolation approach if the velocity does not match with the user applied velocity.
+otherwise if the user applied velocity matches with the velocity data you collected then do rendering with the acceleration signal you already save after the segmentation. 
