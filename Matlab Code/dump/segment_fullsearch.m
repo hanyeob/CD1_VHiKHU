@@ -1,4 +1,4 @@
-function segment_002(INPUT)
+function segment_fullsearch(INPUT)
     NEW_DATA = INPUT;
     tablename = inputname(1);
     j=1; next=1; fileNum=1;
@@ -11,9 +11,11 @@ function segment_002(INPUT)
         while currVel-0.2 <= NEW_DATA.Velocity(j+next) && currVel+0.2 >= NEW_DATA.Velocity(j+next) && j+next<height(NEW_DATA) 
             next=next+1;
         end
-            filename = sprintf('SEG1\\%sseg%d_%.2f.csv',tablename, fileNum, NEW_DATA.Velocity(j));
+        if next>=2000
+            filename = sprintf('SEG3\\%sseg%d_%.2f.csv',tablename, fileNum, NEW_DATA.Velocity(j));
             writetable(NEW_DATA(j:j+next-1,:),filename);
             fileNum = fileNum+1;
+        end
         j=j+index;
         next = 1;
     end
