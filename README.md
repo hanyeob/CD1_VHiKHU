@@ -88,8 +88,8 @@ VHiKHU [바이쿠] - *Bike*와 발음 유사, **V**R × **H**aptics **i**n **KHU
 ### ▫ 진행 방식
 수집된 데이터는 노이즈 및 후반부의 급격한 감속구간을 제거한 뒤 오차범위를 ±0.2km/h로 설정하고 오차범위 내의 속력과 그에 따른 가속도 값을 분류하여 저장하였다. <br>
 아래 그림은 예시로 이해를 돕기 위해 범위를 크게 설정한 모습이다. <br><br>
-![6 DataSegmentation_Example](https://user-images.githubusercontent.com/47781507/146654664-0b524c1d-ea14-4d3a-878a-7fad60dfdd6b.jpg)
-> 데이터 분할 예시
+![6 DataSegmentation Interpolation_Example](https://user-images.githubusercontent.com/47781507/146670931-dc68a4a0-0c32-4e57-b203-fd67ff479aea.jpg)
+> 데이터 분할 및 보간 예시
 
 ## 4. Data Modeling
 ### ▫ 진행 방식
